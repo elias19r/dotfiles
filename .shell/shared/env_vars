@@ -1,0 +1,12 @@
+export SYSTEMD_EDITOR=vim
+export BUNDLER_EDITOR=code
+
+export PATH="${HOME}/code/support/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${PATH}"
+
+export HISTSIZE=2000
+export HISTFILESIZE=2000
+export SAVEHIST=2000
+export HISTCONTROL=ignoreboth
+export HISTIGNORE='export:clear:history:[bf]g:exit:date:* --help'
+export HISTORY_IGNORE="(export|clear|history|[bf]g|exit|date|* --help)"

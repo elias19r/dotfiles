@@ -1,0 +1,3 @@
+# ...
+
+[ -f ~/.shell/custom_zsh ] && . ~/.shell/custom_zsh

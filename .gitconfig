@@ -1,0 +1,16 @@
+[user]
+	name = Elias Rodrigues
+	email = todo@example.com
+	signingkey = ABC123
+[core]
+	editor = vim
+	pager = less -X -F
+	excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[tag]
+	gpgSign = true

@@ -1,0 +1,5 @@
+[ -f ~/.shell/shared/aliases   ] && . ~/.shell/shared/aliases
+[ -f ~/.shell/shared/env_vars  ] && . ~/.shell/shared/env_vars
+[ -f ~/.shell/shared/functions ] && . ~/.shell/shared/functions
+
+eval $(gpg-agent --daemon)

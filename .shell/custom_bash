@@ -1,0 +1,3 @@
+[ -f ~/.shell/shared/main ] && . ~/.shell/shared/main
+
+export HISTFILE="${HOME}/.histfile_bash"

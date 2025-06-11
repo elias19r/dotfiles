@@ -1,0 +1,22 @@
+alias ll='ls -lAFh'
+alias la='ls -CAF'
+alias l='ls -CAF'
+
+alias ncal='ncal -b -M'
+
+alias be='bundle exec'
+alias ber='bundle exec rails'
+alias bers='bundle exec rails server'
+alias berc='bundle exec rails console'
+alias bespec='bundle exec rspec'
+alias bi='bundle install'
+alias binfo='bundle info'
+alias bupdate='bundle update'
+alias becop='bundle exec rubocop'
+alias becopa='bundle exec rubocop -a'
+alias bestd='bundle exec standardrb'
+alias bestdf='bundle exec standardrb --fix'
+
+alias yi='yarn install'
+alias yr='yarn run'
+alias codium='code'

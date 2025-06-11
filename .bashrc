@@ -1,0 +1,3 @@
+# ...
+
+[ -f ~/.shell/custom_bash ] && . ~/.shell/custom_bash
