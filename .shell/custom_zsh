@@ -1,5 +1,0 @@
-[ -f ~/.shell/shared/main ] && . ~/.shell/shared/main
-
-unsetopt share_history
-
-export HISTFILE="${HOME}/.histfile_zsh"

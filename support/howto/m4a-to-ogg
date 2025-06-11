@@ -1,0 +1,1 @@
+ffmpeg -i  input-file.m4a  -acodec libvorbis -aq 4 -vn -ac 2 -map_metadata 0  output-file.ogg

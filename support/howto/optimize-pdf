@@ -1,0 +1,3 @@
+# Convert a PDF to PS and then again back, compressing it efficiently as a result.
+
+ps2pdf input.pdf output.pdf

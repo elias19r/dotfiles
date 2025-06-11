@@ -1,3 +1,3 @@
 # ...
 
-[ -f ~/.shell/custom_bash ] && . ~/.shell/custom_bash
+[ -f ~/support/shell/custom_bash ] && . ~/support/shell/custom_bash

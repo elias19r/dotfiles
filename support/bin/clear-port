@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -n "$1" ]; then
+  port_num="$(lsof -ti:"$1")"
+
+  if [ $? -eq 0 ]; then
+    kill "$port_num"
+  fi
+else
+  exit 1
+fi

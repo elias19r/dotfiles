@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Get a raw transaction hexdump representation and returns its txid
+
+[ "$1" ] || {
+	echo "error: missing raw transaction hexdecimal representation"
+	exit 1
+}
+
+echo -n "$1"     \
+| xxd -r -p      \
+| sha256sum      \
+| cut -d' ' -f 1 \
+| tr -d '\n'     \
+| xxd -r -p      \
+| sha256sum      \
+| cut -d' ' -f 1 \
+| rev

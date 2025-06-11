@@ -1,0 +1,1 @@
+gs -dBACTH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="main-compressed.pdf" "main.pdf"

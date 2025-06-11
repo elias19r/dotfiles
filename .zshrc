@@ -1,3 +1,3 @@
 # ...
 
-[ -f ~/.shell/custom_zsh ] && . ~/.shell/custom_zsh
+[ -f ~/support/shell/custom_zsh ] && . ~/support/shell/custom_zsh

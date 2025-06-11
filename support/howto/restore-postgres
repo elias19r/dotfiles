@@ -1,0 +1,1 @@
+./pg_restore --jobs=8 --verbose --clean --no-acl --no-owner -h localhost -U username -d some_project /path/to/dump_file

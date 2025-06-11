@@ -1,0 +1,25 @@
+#!/bin/bash
+
+file_path='./your-file.csv'
+n_lines=5000
+
+# tail -n +2 $file_path: Prints the whole file starting from the second line (skip header)
+# split -l $n_lines - part_: Split the content into small files of $n_lines each named "part_*"
+tail -n +2 "${file_path}" | split -l "${n_lines}" - part_
+
+# For each part_*
+i=1
+for part_x in part_*
+do
+  # Add the header to a temporary file
+  head -n 1 "${file_path}" > tmp_file
+
+  # Append part_x's content to the temporary file
+  cat "${part_x}" >> tmp_file
+
+  # Rename the temporary file and deletes part_x
+  mv tmp_file "${file_path}.${i}"
+  rm "${part_x}"
+
+  i=$((i+1))
+done
