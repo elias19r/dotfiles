@@ -1,0 +1,7 @@
+make durgod/k320/base:default
+
+# Unplug keyboard and hold down Esc
+
+make durgod/k320/base:default:flash
+
+# Plug keyboard
