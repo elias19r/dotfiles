@@ -1,0 +1,24 @@
+# Export GPG key backup
+
+gpg \
+  --output file-name.gpg \
+  --armor \
+  --export \
+  --export-options export-backup \
+  user@example.com
+
+# Export GPG secret key backup
+
+gpg \
+  --output file-name-secret-keys.gpg \
+  --armor \
+  --export-secret-keys \
+  --export-options export-backup \
+  user@example.com
+
+# Restore GPG keys from file
+
+gpg \
+  --import \
+  --import-options import-restore \
+  file-name-secret-keys.gpg

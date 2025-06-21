@@ -1,6 +1,6 @@
 [user]
-	name = Elias Rodrigues
-	email = test@example.com
+	name = User Name
+	email = user@example.com
 	signingkey = ABC123
 [core]
 	editor = vim

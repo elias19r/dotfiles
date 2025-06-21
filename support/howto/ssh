@@ -1,0 +1,26 @@
+# Generate new SSH key
+
+ssh-keygen -t ed25519 -C "user@example.com"
+
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/path_to_ssh_private_key_file
+
+# List SSH keys
+
+ssh-add -l
+ssh-add -L
+
+# Export SSH keys
+
+# Backup them from folder ~/.ssh
+
+# Restore SSH keys
+
+# Restore them to folder ~/.ssh
+
+# Readd them to the ssh-agent with:
+
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/path_to_ssh_private_key_file
