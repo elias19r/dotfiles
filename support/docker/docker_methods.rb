@@ -16,7 +16,7 @@ def docker_create_postgres(app_name, version: "17.5", port: "5432", user: nil, p
       --network #{app_name}-postgres-network \
       -e POSTGRES_USER=#{user} \
       -e POSTGRES_PASSWORD=#{password} \
-      -v ${HOME}/code/support/docker/#{app_name}/volumes/postgres:/var/lib/postgresql/data \
+      -v ${HOME}/support/docker/#{app_name}/volumes/postgres:/var/lib/postgresql/data \
       -p #{port}:5432 \
       postgres:#{version}
   ]
@@ -61,7 +61,7 @@ def docker_create_redis(app_name, version: "6.2.14", port: "6379")
     docker container create \
       --name #{app_name}-redis-server \
       --network #{app_name}-redis-network \
-      -v ${HOME}/code/support/docker/#{app_name}/volumes/redis:/data \
+      -v ${HOME}/support/docker/#{app_name}/volumes/redis:/data \
       -p #{port}:6379 \
       redis:#{version} \
       redis-server --save 60 1 --loglevel warning
@@ -107,7 +107,7 @@ def docker_create_rabbitmq(app_name, version: "3.12", port: "5672")
       --name #{app_name}-rabbitmq-server \
       --network #{app_name}-rabbitmq-network \
       --hostname #{app_name}-rabbitmq-server \
-      -v ${HOME}/code/support/docker/#{app_name}/volumes/rabbitmq:/var/lib/rabbitmq \
+      -v ${HOME}/support/docker/#{app_name}/volumes/rabbitmq:/var/lib/rabbitmq \
       -p #{port}:5672 \
       -p 1#{port}:15672 \
       rabbitmq:#{version}-management

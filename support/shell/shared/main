@@ -2,4 +2,4 @@
 [ -f ~/support/shell/shared/env_vars  ] && . ~/support/shell/shared/env_vars
 [ -f ~/support/shell/shared/functions ] && . ~/support/shell/shared/functions
 
-eval $(gpg-agent --daemon)
+# eval $(gpg-agent --daemon)

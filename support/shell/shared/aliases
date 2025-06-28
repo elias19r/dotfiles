@@ -20,3 +20,5 @@ alias bestdf='bundle exec standardrb --fix'
 alias yi='yarn install'
 alias yr='yarn run'
 alias codium='code'
+
+alias docker='sudo docker'

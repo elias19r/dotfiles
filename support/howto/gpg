@@ -22,3 +22,6 @@ gpg \
   --import \
   --import-options import-restore \
   file-name-secret-keys.gpg
+
+chmod 600 ~/.gnupg/*
+chmod 700 ~/.gnupg

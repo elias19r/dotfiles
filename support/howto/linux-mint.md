@@ -18,6 +18,9 @@
 - LibreOffice
 - Xournal
 - VLC
+- asdf
+- Docker Engine
+- JetBrains Mono
 
 ## Widgets
 
@@ -33,7 +36,6 @@ sudo apt install \
   autoconf \
   bison \
   build-essential \
-  cabextract \
   cheese \
   curl \
   dnstracer \
@@ -68,8 +70,8 @@ sudo apt install \
   uuid-dev \
   vim \
   xournal \
-  yum \
-  zlib1g-dev
+  zlib1g-dev \
+  zsh
 ```
 
 ## Customization
@@ -81,10 +83,13 @@ sudo apt install \
 
 ## Keyboard Shortcuts
 
+- Choose layout English (Macintosh)
+- Disable change keyboard layout with Super+Space
+
 | Shortcut                          | Description                          |
 |-----------------------------------|--------------------------------------|
-| Super+Up                          | Show the window selection screen     |
-| Super+Down                        | Show the workspace selection screen  |
+| Super+Up, Super+I                 | Show the window selection screen     |
+| Super+Down, Super+K               | Show the workspace selection screen  |
 | Super+D                           | Show desktop                         |
 | Super+Tab                         | Cycle through open windows           |
 | Shift+Super+Tab                   | Cycle backwards through open windows |
@@ -94,8 +99,9 @@ sudo apt install \
 | Super+F11                         | Toggle fullscreen state              |
 | Super+=                           | Increase opacity                     |
 | Super+-                           | Decrease opacity                     |
-| Super+F12                         | Move window                          |
-| Super+F9                          | Center window in screen              |
+| Super+F8                          | Resize window                        |
+| Super+F9                          | Move window                          |
+| Super+F12                         | Center window in screen              |
 | Ctrl+Super+Left , Ctrl+Super+J    | Push tile left                       |
 | Ctrl+Super+Right , Ctrl+Super+L   | Push tile right                      |
 | Ctrl+Super+Up , Ctrl+Super+I      | Push tile up                         |
@@ -113,7 +119,7 @@ sudo apt install \
 | Shift+Super+(                     | Move window to workspace 9           |
 | Shift+Super+)                     | Move window to workspace 10          |
 | Shift+Super+Up , Shift+Super+I    | Move window to left monitor          |
-| Shift+Super+Down , Shift+Supper+K | Move window to right monitor         |
+| Shift+Super+Down , Shift+Super+K  | Move window to right monitor         |
 | Super+Left , Super+J              | Switch to left workspace             |
 | Super+Right , Super+L             | Switch to right workspace            |
 | Super+1                           | Switch to workspace 1                |
@@ -134,8 +140,11 @@ sudo apt install \
 | Super+C                           | Launch calculator                    |
 | Super+W                           | Launch web browser                   |
 | Super+E                           | Home folder                          |
+| Alt+Super+=                       | Zoom in                              |
+| Alt+Super+-                       | Zoom out                             |
 | Super+Print                       | Flameshot                            |
 | Super+B                           | Text Editor                          |
+| Super+M                           | World Clock Calendar                 |
 | Super+N                           | Notifications                        |
 | Super+Space                       | Main Menu                            |
-| Super+Ctrl+Delete                 | System Monitor                       |
+| Alt+Super+Delete                  | System Monitor                       |
