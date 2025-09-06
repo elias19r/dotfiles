@@ -22,3 +22,4 @@ alias yr='yarn run'
 alias codium='code'
 
 alias docker='sudo docker'
+alias sudobash='sudo env HOME=$HOME USER=$USER LOGNAME=$USER bash'
