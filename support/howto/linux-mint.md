@@ -93,12 +93,10 @@ sudo apt install \
 | Super+D                           | Show desktop                         |
 | Super+Tab                         | Cycle through open windows           |
 | Shift+Super+Tab                   | Cycle backwards through open windows |
-| Super+Q                           | Close window                         |
+| Super+W                           | Close window                         |
 | Alt+Space                         | Activate window menu                 |
 | Super+F10                         | Toggle maximization state            |
 | Super+F11                         | Toggle fullscreen state              |
-| Super+=                           | Increase opacity                     |
-| Super+-                           | Decrease opacity                     |
 | Super+F8                          | Resize window                        |
 | Super+F9                          | Move window                          |
 | Super+F12                         | Center window in screen              |
@@ -138,7 +136,7 @@ sudo apt install \
 | Print                             | Take a screenshot                    |
 | Super+T                           | Launch terminal                      |
 | Super+C                           | Launch calculator                    |
-| Super+W                           | Launch web browser                   |
+| Super+F                           | Launch web browser                   |
 | Super+E                           | Home folder                          |
 | Alt+Super+=                       | Zoom in                              |
 | Alt+Super+-                       | Zoom out                             |
@@ -148,3 +146,10 @@ sudo apt install \
 | Super+N                           | Notifications                        |
 | Super+Space                       | Main Menu                            |
 | Alt+Super+Delete                  | System Monitor                       |
+| Alt+Super+1                       | sct 6500                             |
+| Alt+Super+2                       | sct 5500                             |
+| Alt+Super+3                       | sct 4500                             |
+| Alt+Super+4                       | sct 3500                             |
+| Alt+Super+5                       | sct 3000                             |
+| Alt+Super+6                       | sct 2500                             |
+| Alt+Super+7                       | sct 2225                             |
