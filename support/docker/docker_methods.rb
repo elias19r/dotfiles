@@ -2,7 +2,7 @@
 
 # Postgres
 
-def docker_create_postgres(app_name, version: "17.5", port: "5432", user: nil, password: nil)
+def docker_create_postgres(app_name, version: "18.0", port: "5432", user: nil, password: nil)
   user ||= app_name
   password ||= app_name
 
@@ -12,11 +12,11 @@ def docker_create_postgres(app_name, version: "17.5", port: "5432", user: nil, p
   ]
   %x[
     docker container create \
-      --name #{app_name}-postgres-server \
+      --name #{app_name}-postgres \
       --network #{app_name}-postgres-network \
       -e POSTGRES_USER=#{user} \
       -e POSTGRES_PASSWORD=#{password} \
-      -v ${HOME}/support/docker/#{app_name}/volumes/postgres:/var/lib/postgresql/data \
+      -v ${HOME}/support/docker/#{app_name}/volumes/postgres:/var/lib/postgresql \
       -p #{port}:5432 \
       postgres:#{version}
   ]
@@ -27,7 +27,7 @@ def docker_create_postgres(app_name, version: "17.5", port: "5432", user: nil, p
       -e PGPASSWORD=#{password} \
       -it \
       postgres:#{version} \
-      psql -h #{app_name}-postgres-server -U #{user}
+      psql -h #{app_name}-postgres -U #{user}
   ]
 end
 
@@ -35,19 +35,19 @@ def docker_remove_postgres(app_name)
   docker_stop_postgres(app_name)
 
   _docker_remove("#{app_name}-postgres-psql")
-  _docker_remove("#{app_name}-postgres-server")
+  _docker_remove("#{app_name}-postgres")
   _docker_network_remove("#{app_name}-postgres-network")
 end
 
 def docker_start_postgres(app_name)
-  _docker_start("#{app_name}-postgres-server")
+  _docker_start("#{app_name}-postgres")
   sleep 10
   _docker_start("#{app_name}-postgres-psql")
 end
 
 def docker_stop_postgres(app_name)
   _docker_stop("#{app_name}-postgres-psql")
-  _docker_stop("#{app_name}-postgres-server")
+  _docker_stop("#{app_name}-postgres")
 end
 
 # Redis
@@ -59,12 +59,12 @@ def docker_create_redis(app_name, version: "6.2.14", port: "6379")
   ]
   %x[
     docker container create \
-      --name #{app_name}-redis-server \
+      --name #{app_name}-redis \
       --network #{app_name}-redis-network \
       -v ${HOME}/support/docker/#{app_name}/volumes/redis:/data \
       -p #{port}:6379 \
       redis:#{version} \
-      redis-server --save 60 1 --loglevel warning
+      redis --save 60 1 --loglevel warning
   ]
   %x[
     docker container create \
@@ -72,7 +72,7 @@ def docker_create_redis(app_name, version: "6.2.14", port: "6379")
       --network #{app_name}-redis-network \
       -it \
       redis:#{version} \
-      redis-cli -h #{app_name}-redis-server
+      redis-cli -h #{app_name}-redis
   ]
 end
 
@@ -80,19 +80,19 @@ def docker_remove_redis(app_name)
   docker_stop_redis(app_name)
 
   _docker_remove("#{app_name}-redis-cli")
-  _docker_remove("#{app_name}-redis-server")
+  _docker_remove("#{app_name}-redis")
   _docker_network_remove("#{app_name}-redis-network")
 end
 
 def docker_start_redis(app_name)
-  _docker_start("#{app_name}-redis-server")
+  _docker_start("#{app_name}-redis")
   sleep 10
   _docker_start("#{app_name}-redis-cli")
 end
 
 def docker_stop_redis(app_name)
   _docker_stop("#{app_name}-redis-cli")
-  _docker_stop("#{app_name}-redis-server")
+  _docker_stop("#{app_name}-redis")
 end
 
 # RabbitMQ
@@ -104,9 +104,9 @@ def docker_create_rabbitmq(app_name, version: "3.12", port: "5672")
   ]
   %x[
     docker container create \
-      --name #{app_name}-rabbitmq-server \
+      --name #{app_name}-rabbitmq \
       --network #{app_name}-rabbitmq-network \
-      --hostname #{app_name}-rabbitmq-server \
+      --hostname #{app_name}-rabbitmq \
       -v ${HOME}/support/docker/#{app_name}/volumes/rabbitmq:/var/lib/rabbitmq \
       -p #{port}:5672 \
       -p 1#{port}:15672 \
@@ -117,16 +117,16 @@ end
 def docker_remove_rabbitmq(app_name)
   docker_stop_rabbitmq(app_name)
 
-  _docker_remove("#{app_name}-rabbitmq-server")
+  _docker_remove("#{app_name}-rabbitmq")
   _docker_network_remove("#{app_name}-rabbitmq-network")
 end
 
 def docker_start_rabbitmq(app_name)
-  _docker_start("#{app_name}-rabbitmq-server")
+  _docker_start("#{app_name}-rabbitmq")
 end
 
 def docker_stop_rabbitmq(app_name)
-  _docker_stop("#{app_name}-rabbitmq-server")
+  _docker_stop("#{app_name}-rabbitmq")
 end
 
 # Helper
