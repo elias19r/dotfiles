@@ -1,3 +1,5 @@
-# ...
+#!/bin/bash
 
 [ -f ~/support/shell/custom_bash ] && . ~/support/shell/custom_bash
+
+# ...

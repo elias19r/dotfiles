@@ -1,5 +1,9 @@
+#!/bin/bash
+
 [ -f ~/support/shell/shared/main ] && . ~/support/shell/shared/main
 
 unsetopt share_history
 
 export HISTFILE="${HOME}/.histfile_zsh"
+
+~/.local/bin/mise activate zsh | source

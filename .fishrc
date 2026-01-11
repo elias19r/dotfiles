@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[ -f ~/support/shell/custom_fish ] && . ~/support/shell/custom_fish
+
+# ...

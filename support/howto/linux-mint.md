@@ -18,7 +18,7 @@
 - LibreOffice
 - Xournal
 - VLC
-- asdf
+- mise
 - Docker Engine
 - JetBrains Mono
 

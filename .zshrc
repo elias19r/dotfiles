@@ -1,3 +1,5 @@
-# ...
+#!/bin/bash
 
 [ -f ~/support/shell/custom_zsh ] && . ~/support/shell/custom_zsh
+
+# ...
