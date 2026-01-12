@@ -6,4 +6,4 @@ unsetopt share_history
 
 export HISTFILE="${HOME}/.histfile_zsh"
 
-~/.local/bin/mise activate zsh | source
+eval "$(~/.local/bin/mise activate zsh)"
